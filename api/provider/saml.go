@@ -135,6 +135,7 @@ func NewSamlProvider(ext conf.SamlProviderConfiguration, db *storage.Connection,
 		AudienceURI:                 baseURI.String() + "/saml",
 		IDPCertificateStore:         &certStore,
 		SPKeyStore:                  keyStore,
+		NameIdFormat:                "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
 		AllowMissingAttributes:      true,
 	}
 
